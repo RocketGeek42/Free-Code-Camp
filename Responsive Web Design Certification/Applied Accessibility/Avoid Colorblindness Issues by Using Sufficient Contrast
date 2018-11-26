@@ -1,0 +1,25 @@
+<!-- Camper Cat is experimenting with using color for his blog text and
+background, but his current combination of a greenish background-color
+with maroon text color has a 2.5:1 contrast ratio. You can easily adjust
+the lightness of the colors since he declared them using the CSS hsl()
+property (which stands for hue, saturation, lightness) by changing the
+third argument. Increase the background-color lightness value from 35%
+to 55%, and decrease the color lightness value from 20% to 15%. This
+improves the contrast to 5.9:1.-->
+
+<head>
+  <style>
+  button {
+    color: #003366;
+    background-color: #FFFF33;
+    font-size: 14px;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Danger!</h1>
+  </header>
+  <button>Delete Internet</button>
+</body>
