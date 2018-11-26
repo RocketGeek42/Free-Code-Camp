@@ -1,0 +1,25 @@
+<!-- Go ahead, try using the abbreviated hex codes to color the correct elements.
+
+Color	Short Hex Code
+Cyan	#0FF
+Green	#0F0
+Red	#F00
+Fuchsia	#F0F -->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  #orange-text {
+    color: orange;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
