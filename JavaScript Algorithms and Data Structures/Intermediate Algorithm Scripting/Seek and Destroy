@@ -1,0 +1,23 @@
+/*You will be provided with an initial array (the first argument
+in the destroyer function), followed by one or more arguments.
+Remove all elements from the initial array that are of the same
+value as these arguments.
+
+Note
+You have to use the arguments object.*/
+
+function destroyer(arr) {
+  // Remove all the values
+  var arg = Array.prototype.slice.call(arguments); //create an array of arguments, will check against this
+
+  for (var i = 0; i < arr.length; i++) { //basic for loop to iterate through arr
+    for (var j = 0; j < arg.length; j++) { //nested loop to iterate through arg
+      if (arr[i] === arg[j]) { //check if value is present in both arrays
+        delete arr[i]; //delete value that is present in both arrays
+      }
+    }
+  }
+  return arr.filter(Boolean);//modified array checking for any null items created by delete operator
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
