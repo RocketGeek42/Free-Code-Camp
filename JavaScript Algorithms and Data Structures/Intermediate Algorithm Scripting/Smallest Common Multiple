@@ -1,0 +1,43 @@
+/*Find the smallest common multiple of the provided parameters that can be
+evenly divided by both, as well as by all sequential numbers in the range
+between these parameters.
+
+The range will be an array of two numbers that will not necessarily be in
+numerical order.
+
+For example, if given 1 and 3, find the smallest common multiple of both
+1 and 3 that is also evenly divisible by all numbers between 1 and 3.
+The answer here would be 6.*/
+
+function smallestCommons(arr) {
+
+  arr.sort(function(a, b) {
+    return a - b;
+  });
+
+  let filledArr = [];
+  for (var i = arr[0]; i <= arr[1]; i++) {
+    filledArr.push(i);
+  }
+
+  var common_multiple = 0;
+  var loop = 1;
+  var n;
+
+
+  do {
+    common_multiple = filledArr[0] * loop * filledArr[1];
+    for (n = 2; n < filledArr.length; n++) {
+      if (common_multiple % filledArr[n] !== 0) {
+        break;
+      }
+    }
+
+    loop++;
+  } while (n !== filledArr.length);
+
+  return common_multiple;
+}
+
+
+smallestCommons([1,5]);
