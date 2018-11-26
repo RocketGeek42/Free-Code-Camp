@@ -1,0 +1,8 @@
+//Give your body element the background-color of black.
+
+<style>
+    body {
+        background-color: black;
+    }
+
+</style>
